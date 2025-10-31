@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>explore tecnology | Ismael</title>
+    <!-- Fuente moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        /* ===== GENERAL ===== */
+        * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+        body {
+            background: linear-gradient(135deg, #0f1624, #1c1c2a);
+            color: #f0f0f0;
+            line-height: 1.6;
+        }
+        a { text-decoration:none; color: inherit; }
+
+        /* ===== HEADER ===== */
+        header {
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top:0;
+            z-index: 10;
+        }
+        header h1 { color:#00CED1; }
+        nav ul { display:flex; list-style:none; gap:20px; }
+        nav ul li a { transition:0.3s; }
+        nav ul li a:hover { color:#1e90ff; }
+
+        /* ===== HERO ===== */
+        .hero {
+            text-align:center;
+            padding:80px 20px;
+        }
+        .hero h2 { font-size:2.5em; color:#00CED1; }
+        .hero p { font-size:1.2em; margin-top:15px; }
+
+        /* ===== CARDS ===== */
+        .cards {
+            display:grid;
+            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+            gap:25px;
+            padding:50px;
+        }
+        .card {
+            padding:25px;
+            border-radius:15px;
+            background: rgba(255,255,255,0.05);
+            box-shadow:0 5px 20px rgba(0,0,0,0.5);
+            text-align:center;
+            transition:0.3s;
+            cursor:pointer;
+        }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 10px 30px #1e90ff; }
+
+        /* COLORES */
+        .card.ia { background: linear-gradient(135deg,#ff6a00,#ee0979);}
+        .card.web { background: linear-gradient(135deg,#1e90ff,#00ced1);}
+        .card.ciber { background: linear-gradient(135deg,#ff3c3c,#ff8c00);}
+
+        /* ===== FORMULARIO ===== */
+        .form-section {
+            padding:50px;
+            background: rgba(255,255,255,0.05);
+            margin: 50px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+        }
+        .form-section h2 { text-align:center; color:#00CED1; margin-bottom:20px;}
+        .form-section form { display:flex; flex-direction:column; gap:15px; }
+        .form-section input, .form-section textarea, .form-section select {
+            padding:10px;
+            border-radius:10px;
+            border:none;
+            outline:none;
+        }
+        .form-section button {
+            padding:15px;
+            border:none;
+            border-radius:10px;
+            background:#1e90ff;
+            color:white;
+            cursor:pointer;
+            font-weight:bold;
+            transition:0.3s;
+        }
+        .form-section button:hover { background:#00CED1; }
+
+        /* ===== FOOTER ===== */
+        footer {
+            text-align:center;
+            padding:30px;
+            color:#00CED1;
+            background: rgba(255,255,255,0.05);
+        }
+
+        /* ===== MENSAJE FINAL ===== */
+        #author {
+            margin-top:20px;
+            font-size:1.5em;
+            color:#ff8c00;
+            font-weight:bold;
+            text-align:center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>🌐 explore tecnology</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#temas">Temas</a></li>
+                <li><a href="#encuesta">Encuesta</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+        <h2>Explora el mundo de la tecnología</h2>
+        <p>Aprende sobre inteligencia artificial, desarrollo web, ciberseguridad y mucho más.</p>
+    </section>
+
+    <!-- TARJETAS DE TEMAS -->
+    <section id="temas" class="cards">
+        <div class="card ia">
+            <h3>🤖 Inteligencia Artificial</h3>
+            <p>Aprendizaje automático, redes neuronales y automatización.</p>
+        </div>
+        <div class="card web">
+            <h3>💻 Desarrollo Web</h3>
+            <p>HTML, CSS, JavaScript y frameworks modernos.</p>
+        </div>
+        <div class="card ciber">
+            <h3>🛡️ Ciberseguridad</h3>
+            <p>Protege información y aprende sobre ataques y prevención.</p>
+        </div>
+    </section>
+
+    <!-- ENCUESTA INTERACTIVA -->
+    <section id="encuesta" class="form-section">
+        <h2>Encuesta Rápida</h2>
+        <form id="surveyForm">
+            <label>¿Cuál es tu área favorita de la tecnología?</label>
+            <select required>
+                <option value="">Selecciona una opción</option>
+                <option value="ia">Inteligencia Artificial</option>
+                <option value="web">Desarrollo Web</option>
+                <option value="ciber">Ciberseguridad</option>
+            </select>
+
+            <label>¿Con qué frecuencia usas tecnología en tu vida diaria?</label>
+            <select required>
+                <option value="">Selecciona una opción</option>
+                <option value="siempre">Siempre</option>
+                <option value="frecuente">Frecuente</option>
+                <option value="ocasional">Ocasional</option>
+            </select>
+
+            <button type="submit">Enviar Encuesta</button>
+            <p id="surveyResult"></p>
+        </form>
+    </section>
+
+    <!-- FORMULARIO DE CONTACTO -->
+    <section id="conta

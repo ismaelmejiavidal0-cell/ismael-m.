@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnovaTech | Mundo de la Informática</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script defer src="scripts/main.js"></script>
+    <!-- Fuentes y librerías -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="assets/logo.png" alt="Logo InnovaTech">
+                <h1>InnovaTech</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#tecnologias">Tecnologías</a></li>
+                <li><a href="#estadisticas">Estadísticas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h2>El poder de la informática moderna</h2>
+            <p>Explora cómo la tecnología está transformando el mundo. Aprende sobre programación, inteligencia artificial, redes y mucho más.</p>
+            <a href="#tecnologias" class="btn">Descubrir más</a>
+        </div>
+    </section>
+
+    <section id="tecnologias" class="content-section">
+        <h2>Tecnologías Clave</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Inteligencia Artificial</h3>
+                <p>La IA impulsa avances en reconocimiento de voz, visión computacional y automatización inteligente.</p>
+            </div>
+            <div class="card">
+                <h3>Desarrollo Web</h3>
+                <p>HTML, CSS, JavaScript y frameworks como React o Vue impulsan la nueva generación de aplicaciones web.</p>
+            </div>
+            <div class="card">
+                <h3>Ciberseguridad</h3>
+                <p>Proteger la información es fundamental. Conoce cómo prevenir ataques y asegurar los datos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="estadisticas" class="content-section">
+        <h2>Estadísticas del Mundo Tecnológico</h2>
+        <canvas id="techChart"></canvas>
+    </section>
+
+    <section id="contacto" class="content-section contact">
+        <h2>Contáctanos</h2>
+        <form id="contactForm">
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <textarea placeholder="Mensaje" rows="4" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <p class="thanks-message"></p>
+    </section>
+
+    <footer>
+        <p>© 2025 InnovaTech - Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
